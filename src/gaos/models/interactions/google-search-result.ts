@@ -18,4 +18,8 @@ export type GoogleSearchResult = {
    * Web content snippet that can be embedded in a web page or an app webview.
    */
   search_suggestions?: string | undefined;
+  /**
+   * This field is populated only when the grounding source is Google Search.
+   */
+  search_queries?: Array<string> | undefined;
 };

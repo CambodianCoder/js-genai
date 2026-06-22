@@ -14,7 +14,7 @@ import { AgentOption } from "./agent-option.js";
 import { DeepResearchAgentConfig } from "./deep-research-agent-config.js";
 import { DynamicAgentConfig } from "./dynamic-agent-config.js";
 import { Environment } from "./environment.js";
-import { InteractionsInput } from "./interactions-input.js";
+import { InteractionsInputInput } from "./interactions-input-input.js";
 import { ResponseFormat } from "./response-format.js";
 import { ResponseModality } from "./response-modality.js";
 import { ServiceTier } from "./service-tier.js";
@@ -102,5 +102,5 @@ export type CreateAgentInteraction = {
   /**
    * The input for the interaction.
    */
-  input: InteractionsInput;
+  input: InteractionsInputInput;
 };

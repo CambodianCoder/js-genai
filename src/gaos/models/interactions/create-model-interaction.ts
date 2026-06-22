@@ -12,7 +12,7 @@
 
 import { Environment } from "./environment.js";
 import { GenerationConfig } from "./generation-config.js";
-import { InteractionsInput } from "./interactions-input.js";
+import { InteractionsInputInput } from "./interactions-input-input.js";
 import { Model } from "./model.js";
 import { ResponseFormat } from "./response-format.js";
 import { ResponseModality } from "./response-modality.js";
@@ -104,5 +104,5 @@ export type CreateModelInteraction = {
   /**
    * The input for the interaction.
    */
-  input: InteractionsInput;
+  input: InteractionsInputInput;
 };

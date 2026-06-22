@@ -84,8 +84,10 @@ import type { ModalityTokens as ModalityTokens$Import } from "./models/interacti
 import type { ModelOutputStep as ModelOutputStep$Import } from "./models/interactions/model-output-step.js";
 import type { Model as Model$Import } from "./models/interactions/model.js";
 import type { PlaceCitation as PlaceCitation$Import } from "./models/interactions/place-citation.js";
+import type { RetrievalResultDelta as RetrievalResultDelta$Import } from "./models/interactions/retrieval-result-delta.js";
 import type { Retrieval as Retrieval$Import } from "./models/interactions/retrieval.js";
 import type { ReviewSnippet as ReviewSnippet$Import } from "./models/interactions/review-snippet.js";
+import type { SourceFlaggingUri as SourceFlaggingUri$Import } from "./models/interactions/source-flagging-uri.js";
 import type { Source as Source$Import } from "./models/interactions/source.js";
 import type { SpeechConfig as SpeechConfig$Import } from "./models/interactions/speech-config.js";
 import type { Status as Status$Import } from "./models/interactions/status.js";
@@ -248,9 +250,11 @@ type Error$ = ErrorT$Import;
 type Metadata$ = StreamMetadata$Import;
 type Arguments$2 = GoogleMapsCallArguments$Import;
 type Place$ = GoogleMapsResultPlaces$Import;
+type SourceFlaggingUris$ = SourceFlaggingUri$Import;
 type ReviewSnippet$ = ReviewSnippet$Import;
 type Result$ = GoogleMapsResult$Import;
 type Place$2 = GoogleMapsResultPlaces$Import;
+type SourceFlaggingUris$2 = SourceFlaggingUri$Import;
 type ReviewSnippet$2 = ReviewSnippet$Import;
 type Arguments$3 = GoogleSearchCallArguments$Import;
 type Result$2 = GoogleSearchResult$Import;
@@ -275,6 +279,7 @@ type Image$ = ImageDelta$Import;
 type MCPServerToolCall$ = MCPServerToolCallDelta$Import;
 type MCPServerToolResult$ = MCPServerToolResultDelta$Import;
 type Metadata$5 = StepDeltaMetadata$Import;
+type RetrievalResult$ = RetrievalResultDelta$Import;
 type Text$ = TextDelta$Import;
 type TextAnnotationDelta$ = TextAnnotationDelta$Import;
 type ThoughtSignature$ = ThoughtSignatureDelta$Import;
@@ -414,10 +419,12 @@ export type Place = Place$;
 export type PlaceCitation = PlaceCitation$;
 export type Result = Result$;
 export type Retrieval = Retrieval$;
+export type RetrievalResult = RetrievalResult$;
 export type ReviewSnippet = ReviewSnippet$;
 export type RotateSigningSecretRequest = RotateSigningSecretRequest$;
 export type SigningSecret = SigningSecret$;
 export type Source = Source$;
+export type SourceFlaggingUris = SourceFlaggingUris$;
 export type SpeechConfig = SpeechConfig$;
 export type Step = Step$;
 export type StepDelta = StepDelta$;
@@ -578,6 +585,7 @@ export declare namespace Interactions {
   }
   export namespace GoogleMapsResult {
     export interface Place extends Place$ {}
+    export type SourceFlaggingUris = SourceFlaggingUris$;
     export namespace Place {
       export type ReviewSnippet = ReviewSnippet$;
     }
@@ -586,6 +594,7 @@ export declare namespace Interactions {
     export interface Result extends Result$ {}
     export namespace Result {
       export interface Place extends Place$2 {}
+      export type SourceFlaggingUris = SourceFlaggingUris$2;
       export namespace Place {
         export type ReviewSnippet = ReviewSnippet$2;
       }
@@ -634,6 +643,7 @@ export declare namespace Interactions {
     export type MCPServerToolCall = MCPServerToolCall$;
     export type MCPServerToolResult = MCPServerToolResult$;
     export type Metadata = Metadata$5;
+    export type RetrievalResult = RetrievalResult$;
     export type Text = Text$;
     export type TextAnnotationDelta = TextAnnotationDelta$;
     export type ThoughtSignature = ThoughtSignature$;

@@ -11,20 +11,11 @@
  */
 
 import { GoogleMapsResultPlaces } from "./google-maps-result-places.js";
-import { SourceFlaggingUri } from "./source-flagging-uri.js";
 
 /**
  * The result of the Google Maps.
  */
-export type GoogleMapsResult = {
+export type GoogleMapsResultInput = {
   places?: Array<GoogleMapsResultPlaces> | undefined;
   widget_context_token?: string | undefined;
-  /**
-   * Output only. A list of URIs that can be used to flag a place or review for
-   *
-   * @remarks
-   * inappropriate content. This field is populated only when the grounding
-   * source is Google Maps.
-   */
-  source_flagging_uris?: Array<SourceFlaggingUri> | undefined;
 };
